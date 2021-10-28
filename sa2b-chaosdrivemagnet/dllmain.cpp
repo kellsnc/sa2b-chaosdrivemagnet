@@ -137,8 +137,6 @@ static void __cdecl ChaosDrive_Main_r(ObjectMaster* obj)
 {
     auto data = obj->Data1.Entity;
 
-    MainCharObj2[0]->Powerups |= Powerups_MagneticBarrier;
-
     if (obj->MainSub != DeleteObject_ && data->Action == 0)
     {
         ChaosDrive_Magnet(data);
