@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+  <Groups>
+    <Group name="">
+      <Property name="MagneticShieldCdt" type="bool" defaultvalue="False" display="Require Magnetic Shield" />
+      <Property name="DisableYellow" type="bool" defaultvalue="False" display="Disable Yellow" />
+      <Property name="DisableGreen" type="bool" defaultvalue="False" display="Disable Green" />
+      <Property name="DisableRed" type="bool" defaultvalue="False" display="Disable Red" />
+      <Property name="DisablePurple" type="bool" defaultvalue="False" display="Disable Purple" />
+    </Group>
+    <Group name="Physics">
+      <Property name="Radius" type="float" defaultvalue="100.0" display="Radius">
+        <HelpText>The radius in which chaos drives detect players.</HelpText>
+      </Property>
+      <Property name="Force" type="float" defaultvalue="1.75" display="Force">
+        <HelpText>The force of the magnetic field, higher makes chaos drives faster.</HelpText>
+      </Property>
+      <Property name="MaxSpeed" type="float" defaultvalue="5.0" display="Maximum speed">
+        <HelpText>The maximum speed that the chaos drives can go at.</HelpText>
+      </Property>
+    </Group>
+  </Groups>
+</ConfigSchema>
