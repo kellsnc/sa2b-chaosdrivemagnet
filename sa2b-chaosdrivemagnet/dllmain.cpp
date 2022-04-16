@@ -50,7 +50,7 @@ static void ChaosDrive_GetClosestPlayer(NJS_VECTOR* position, int& playerid, flo
             continue;
         }
 
-        if (MagneticShieldCdt == true && (ppwk->Powerups & Powerups_MagneticBarrier))
+        if (MagneticShieldCdt == true && !(ppwk->Powerups & Powerups_MagneticBarrier))
         {
             continue;
         }
@@ -154,10 +154,10 @@ extern "C"
         const auto config = new IniFile(std::string(path) + "\\config.ini");
 
         MagneticShieldCdt = config->getBool("", "MagneticShieldCdt", MagneticShieldCdt);
-        DisableYellow = config->getBool("", "MagneticShieldCdt", DisableYellow);
-        DisableGreen = config->getBool("", "MagneticShieldCdt", DisableGreen);
-        DisableRed = config->getBool("", "MagneticShieldCdt", DisableRed);
-        DisablePurple = config->getBool("", "MagneticShieldCdt", DisablePurple);
+        DisableYellow = config->getBool("", "DisableYellow", DisableYellow);
+        DisableGreen = config->getBool("", "DisableGreen", DisableGreen);
+        DisableRed = config->getBool("", "DisableRed", DisableRed);
+        DisablePurple = config->getBool("", "DisablePurple", DisablePurple);
 
         auto physicsgrp = config->getGroup("Physics");
 
